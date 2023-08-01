@@ -1,27 +1,44 @@
-# SalaDeJuegos
+# TP 1 Sala de Juegos - CELESTE CISTERNAS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+https://saladejuegos-cisternas-celeste.netlify.app/
 
-## Development server
+# > INICIO
+![](fotos/homeSinLogin.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# > REGISTRO
+![](fotos/registro.png)
 
-## Code scaffolding
+# > INGRESAR
+![](fotos/login.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# > CHAT
+### Habilitado su uso en toda la página una vez que el usuario esta logueado
+![](fotos/chat.png)
 
-## Build
+# > JUEGOS
+![](fotos/juegos.png)
+### Menú de juegos con una breve descripción de cada uno.
+![](fotos/seleccion.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ahorcado:
+![](fotos/ahorcado.png)
 
-## Running unit tests
+## Mayor o Menor:
+![](fotos/mayormenor.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Preguntados:
+![](fotos/preguntados.png)
 
-## Running end-to-end tests
+## Buscaminas:
+![](fotos/buscaminas.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# > ESTADÍSTICAS
+### Menú de estadÍsticas donde se puede elegir el usuario para ver los puntajes de cada juego.
+![](fotos/estadisticas.png)
 
-## Further help
+# > OPINIÓN
+### Menú para dejar la opinion sobre el uso de la página.
+![](fotos/opinion.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# > QUIÉN SOY
+![](fotos/quiensoy.png)

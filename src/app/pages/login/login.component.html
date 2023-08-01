@@ -1,0 +1,64 @@
+<section style="width: 100%;height: 100%; position: fixed;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100 mt-3">
+            <div class="login-box">
+                <h2>Ingrese sus datos</h2>
+                <form>
+                    <div class="user-box form-outline mb-4 user-box group log-input">
+                        <input type="text" class="form-control" name="correo" value="" required [(ngModel)]="correo"
+                            (input)="validarCorreo()"
+                            [ngClass]="{'is-invalid': !correoValido, 'is-valid': correoValido}">
+                        <div class="invalid-feedback" *ngIf="correo.length > 0">
+                            Ingrese un correo válido
+                        </div>
+                        <div class="valid-feedback">
+                            Correo válido
+                        </div>
+                        <label for="correo" class="form-label">Correo</label>
+
+                    </div>
+                    <div class="user-box form-outline mb-4 user-box group log-input">
+
+                        <input type="password" class="form-control" name="password" value="" required
+                            [(ngModel)]="password" (input)="validarPass()"
+                            [ngClass]="{'is-invalid': !passValido, 'is-valid': passValido}">
+                        <div class="invalid-feedback" *ngIf="password.length > 0">
+                            Ingrese una contraseña válida
+                        </div>
+                        <div class="valid-feedback">
+                            Contraseña válido
+                        </div>
+                        <label for="password" class="form-label">Contraseña</label>
+                    </div>
+                    <div style="display: flex; justify-content:center">
+                        <a (click)="login()" class="custom-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Ingresar
+                        </a>
+                    </div>
+                    <div style="display: flex;">
+                        <a (click)="seleccionarUsuario(1)"
+                            style="flex-basis: 50%; font-size: 15px; justify-content: center;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p style="text-align: center; display: flex; justify-content: center;">Admin</p>
+                        </a>
+                        <a (click)="seleccionarUsuario(2)"
+                            style="flex-basis: 50%;font-size: 15px; justify-content: center;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p style="text-align: center; display: flex; justify-content: center;">Empleado</p>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

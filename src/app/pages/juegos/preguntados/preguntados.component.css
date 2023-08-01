@@ -1,0 +1,181 @@
+.preguntados-container {
+  font-family: "Poppins", sans-serif;
+  background-color: #1055b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  background-image: url("/assets/preguntados/geografia.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-5%);
+}
+
+.contendor-bandera >h3 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-weight: bold;
+  width: max-content;
+  display: block;
+  margin: 0rem auto 0;
+  margin-bottom: 10px;
+  background-color: #74acdc;
+  padding: 2px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #1055b2;
+}
+
+.puntuacion {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-130%);
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  font-weight: bold;
+  
+}
+
+.intentos {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.contenedor-pregunta {
+  display: block;
+  margin: 0 auto;
+  transform: translateY(30%);
+}
+
+.contendor-bandera
+{
+  position: block;
+  transform: translateY(12%);
+}
+
+.contendor-bandera > img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 8px black;
+  width: 25rem;
+  height: 15rem;
+  object-fit: cover;
+  margin-top: 0;
+  transform: translateY(0%);
+}
+
+.juego-terminado {
+  text-align: center;
+  font-size: 5rem;
+  text-shadow: 2px 2px 2px rgb(7, 7, 7);
+  font-weight: bold;
+  transform: translateY(-150%);
+}
+
+.victoria {
+  color: #33ff00;
+}
+
+.derrota {
+  color: #ff0000;
+}
+
+.btn-opcion {
+  width: 36rem;
+  height:4.2rem;
+  transform: translateY(-20%);
+  padding: 1.0rem 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.0px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  outline: none;
+  display: block;
+  margin: 1.2rem auto;
+}
+
+.btn-opcion:hover {
+  background-color: #13b4b4;
+  box-shadow: 0px 15px 20px rgba(0, 255, 242, 0.4);
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn-opcion:active {
+  transform: translateY(-1px);
+}
+
+.correcta:hover {
+  background-color: #33ff00;
+  box-shadow: 0px 15px 20px rgba(81, 255, 0, 0.4);
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+.incorrecta:hover {
+  background-color: #ff0000;
+  box-shadow: 0px 15px 20px rgba(255, 51, 0, 0.4);
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn-reiniciar {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  margin: 1rem auto;
+}
+
+.btn-reiniciar:hover {
+  background-color: #fdfdfd;
+  box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
+  color: #000;
+  transform: translateY(-7px);
+}
+
+.btn-reiniciar {
+  transform: translateY(-1px);
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .btn-opcion {
+    width: 95%;
+    padding: 1em 2.2em;
+    font-weight: bolder;
+  }
+
+  .juego-terminado {
+    font-size: 3rem;
+  }
+}

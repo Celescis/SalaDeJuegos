@@ -1,0 +1,122 @@
+.chat-container {
+  font-family: "Poppins", sans-serif;
+  --background-image: url("/assets/background/backchat.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 94vh;
+}
+
+.contenedor-carta {
+  background-image: url("/assets/background/backchat.gif");
+  background-position: center;
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: #f0f0f0;
+  z-index: 1;
+  transition: transform 0.3s ease-out;
+  transform: translateX(100%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.card-body {
+  background-size: cover;
+  background-position: center;
+}
+
+.card-header {
+  background-color: rgb(104, 15, 92);
+  color: white;
+  font-weight: bolder;
+}
+
+.btn-enviar {
+  cursor: pointer;
+  color: #fff;
+  background: rgb(196, 5, 170);
+}
+
+.btn-enviar:active {
+  transition: all 0.5s;
+  transform: scale(0.8);
+}
+
+.contenedor-mensajes {
+  overflow-y: auto; 
+  overflow: auto;
+  padding: 0.3rem;
+  position: absolute;
+  top: 88px;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+}
+
+.contenedor-mensajes::-webkit-scrollbar {
+  display: none;
+}
+
+.card-footer {
+  background: rgba(0, 0, 0, 0.507);
+}
+
+.mensaje-enviado {
+  display: block;
+  float: right;
+  background-color: rgba(24, 110, 4, 0.781);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  min-width: 50.1%;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.mensaje-recibido {
+  display: block;
+  float: left;
+  background-color: rgba(3, 88, 173, 0.916);
+  color: white;
+  /* text-shadow: 1px 1px 1px rgb(0, 0, 0); */
+  min-width: 50.1%;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.email-2 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(3, 18, 92);
+}
+
+.fecha {
+  font-size: 0.9rem;
+  color: rgb(201, 200, 200);
+  text-align: right;
+  float: right;
+}
+
+.view-from-right {
+  animation: viewFromRight 0.5s;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  z-index: 1;
+  transition: transform 0.3s ease-out;
+  transform: translateX(100%);
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}

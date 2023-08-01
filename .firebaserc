@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pplab4-2a994": {
+      "hosting": {
+        "SalaDeJuegos": [
+          "saladejuegos-c0ac9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pplab4-2a994"
+  }
+}

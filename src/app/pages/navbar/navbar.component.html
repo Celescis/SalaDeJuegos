@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg ">
+  <a class="navbar-brand" routerLink="/home">
+    <img src="favicon.ico" alt="Favicon" class="favicon" style="height: 40px;">
+  </a>
+  <p *ngIf="userService.seLogueo" style="color: white; font-size: 20px; margin-left: 50px; margin:0;text-transform: uppercase;"><strong>{{userName}}</strong>
+  </p>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Inicio</a>
+      </li>
+      <li class="nav-item dropdown" *ngIf="!userService.seLogueo">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Usuario
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" routerLink="/login">Ingresar</a></li>
+          <li><a class="dropdown-item" routerLink="/register">Registrar</a></li>
+        </ul>
+      </li>
+      <li *ngIf="userService.seLogueo" class="nav-item">
+        <a class="nav-link" routerLink="/menuJuegos">Juegos</a>
+      </li>
+      <li *ngIf="userService.seLogueo" class="nav-item">
+        <a class="nav-link" routerLink="/listado">Estadisticas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/quiensoy">Quien Soy</a>
+      </li>
+      <li *ngIf="userService.seLogueo" class="nav-item">
+        <a class="nav-link" routerLink="/encuesta">Tú opinión</a>
+      </li>
+    </ul>
+    <form *ngIf="userService.seLogueo" class="d-flex" role="search">
+      <button (click)="abrirChat()" class="buttonChat"><img src="/assets/icons/chat.png"
+          style="width: 30px; height: 30px; margin: 0px ; margin-bottom: 2px; margin-right: 10px;"></button>
+      <button (click)="cerrarSesion()" class="buttonChat"><img src="/assets/icons/salir.png"
+          style="width: 30px; height: 30px;margin: 0px ; margin-bottom: 2px;"></button>
+    </form>
+
+  </div>
+</nav>
+<app-chat [visible]="expandido"></app-chat>

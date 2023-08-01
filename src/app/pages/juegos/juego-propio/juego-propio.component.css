@@ -1,0 +1,123 @@
+
+section{
+  background-image: url('/assets/buscaminas/backbuscaminas.jpg');
+ /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover; 
+  
+}
+
+.cubo {
+  transform: translate(-50%, -50%);
+  display: grid;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  grid-template-rows: auto 1fr;
+  width: 500px;
+  height: 600px;
+  border: 10px outset #ccc;
+  background-color: #bdbdbd
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdbdbd;
+  border: 5px inset;
+}
+.header-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botonsonrisa
+{
+  cursor: pointer;
+}
+
+.botonsonrisa:active
+{
+  transform: scale(0.95);
+}
+
+.titulo {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-weight: bold;
+  width: max-content;
+  font-size: 50px;
+  display: block;
+  margin: 0 auto;
+  background-color: #919191;
+  padding: 5px 15px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 20px #000000;
+  margin-top: 50px;
+  margin-bottom: 1rem;
+  border-radius: 45px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 45%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+}
+
+button {
+  width: 80px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdbdbd;
+  border: 8px groove;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 2px;
+  width: 500px;
+  height: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #c0c0c0;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 1px;
+}
+
+.revealed {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b7b7b7;
+  margin-left: -3px;
+  border: 8px inset;
+}

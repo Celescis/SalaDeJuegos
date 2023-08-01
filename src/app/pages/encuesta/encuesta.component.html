@@ -1,0 +1,137 @@
+<div class="encuesta-container" style="width: 100%;height: 100%; position: fixed;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100 mt-3">
+            <form class="container box contenedor-form ">
+                <div class="glass"></div>
+                <div class="d-flex flex-wrap">
+                    <div class="flex-column" style="flex: 1;">
+
+                        <div class="user-box form-outline mb-4 user-box group log-input" style="margin-bottom: 6%;">
+                            <label class="form-label">Nombre: </label>
+                            <input [ngModelOptions]="{standalone: true}" (input)="validarName()"
+                                [ngClass]="{'is-invalid': !nameValido, 'is-valid': nameValido}" [(ngModel)]="nombre"
+                                type="text" class="form-control text-success" />
+                            <div class="invalid-feedback" *ngIf="nombre.length > 0">
+                                Nombre ingresado inválido (3-10 carácteres)
+                            </div>
+                            <div class="valid-feedback">
+                                Nombre válido
+                            </div>
+                        </div>
+                        <div class="user-box form-outline mb-4 user-box group log-input" style="margin-bottom: 6%;">
+                            <label class="text-white">Edad: </label>
+                            <input [ngModelOptions]="{standalone: true}" (input)="validarEdad()"
+                                [ngClass]="{'is-invalid': !edadValidada, 'is-valid': edadValidada}"
+                                [(ngModel)]="edad" type="number" class="form-control text-success" />
+                            <div class="invalid-feedback" *ngIf="edad!=null && edad!=0">
+                                Ingrese una edad válida (18 a 99 años)
+                            </div>
+                            <div class="valid-feedback">
+                                Edad válida
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex-column" style="flex: 1;">
+                        <div class="user-box form-outline mb-4 user-box group log-input" style="margin-bottom: 6%;">
+                            <label class="text-white">Apellido: </label>
+                            <input [ngModelOptions]="{standalone: true}" (input)="validarApellido()"
+                                [ngClass]="{'is-invalid': !apellidoValido, 'is-valid': apellidoValido}"
+                                [(ngModel)]="apellido" type="text" class="form-control text-success" />
+                            <div class="invalid-feedback" style="margin-left: 5px;" *ngIf="apellido.length > 0">
+                                Apellido ingresado inválido (3-10 carácteres)
+                            </div>
+                            <div class="valid-feedback">
+                                Apellido válido
+                            </div>
+
+                        </div>
+
+
+                        <div class="user-box form-outline mb-4 user-box group log-input" style="margin-bottom: 6%;">
+                            <label class="text-white">Télefono: </label>
+                            <input [ngModelOptions]="{standalone: true}" (input)="validarTelefono()"
+                                [ngClass]="{'is-invalid': !telefonoValido, 'is-valid': telefonoValido}"
+                                [(ngModel)]="telefono" type="text" class="form-control text-success" />
+                            <div class="invalid-feedback" *ngIf="telefono.length > 0">
+                                Ingrese un télefono válido (8-10 números)
+                            </div>
+                            <div class="valid-feedback">
+                                Télefono válido
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr style="margin-bottom: 5px; margin-top: 0;" />
+                <div class="preguntas">
+
+                    <div class="col">
+                        <label style="left:0;display: flex;">¿Qué jugaste?</label>
+                        <div class="form-check text-start">
+                            <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="ahorcado"
+                                id="ahorcado" name="juegos" />
+                            <label class="form-check-label" for="ahorcado">Ahorcado</label>
+                        </div>
+                        <div class="form-check text-start">
+                            <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="mayorMenor"
+                                id="mayorMenor" name="juegos" />
+                            <label class="form-check-label" for="mayorMenor">Mayor o Menor</label>
+                        </div>
+                        <div class="form-check text-start"
+                            [ngClass]="{'is-invalid': !checkValidado, 'is-valid': checkValidado}">
+                            <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="preguntados"
+                                id="preguntados" name="juegos" />
+                            <label class="form-check-label" for="preguntados">Preguntados</label>
+                        </div>
+                        <div class="form-check text-start">
+                            <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="buscaminas"
+                                id="buscaminas" name="juegos" />
+                            <label class="form-check-label">Buscaminas</label>
+                        </div>
+                        <div class="invalid-feedback">
+                            *Obligatorio: Seleccione el juego
+                        </div>
+                        <div class="valid-feedback">
+                            Selección válida
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label style="left:0;display: flex;">¿Cuál juego te gustaría que agreguemos?</label>
+                        <select (input)="validarSelect()" style="width: 15rem" class="form-select text-start"
+                            id="juegoAgregar" [ngClass]="{'is-invalid': !selecValidado, 'is-valid': selecValidado}">
+                            <option value="" selected>Elija uno</option>
+                            <option value="Sudoku">Sudoku</option>
+                            <option value="Tetris">Tetris</option>
+                            <option value="Pac-Man">Pac-Man</option>
+                            <option value="Viborita">Viborita</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            *Obligatorio: Elija un juego
+                        </div>
+                        <div class="valid-feedback">
+                            Selección válida
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label style="left:0;display: flex;">¿Recomendarías la página?</label>
+                        <div class="form-check text-start">
+                            <input class="form-check-input" type="radio" name="recomendacion" id="opcion1" value="si"
+                                checked />
+                            <label class="form-check-label" for="opcion1">Si</label>
+                        </div>
+                        <div class="form-check text-start">
+                            <input class="form-check-input" type="radio" name="recomendacion" id="opcion2" value="no" />
+                            <label class="form-check-label" for="opcion2">No</label>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="generarEncuesta()" type="submit" class="btn-juegos">Enviar encuesta</button>
+            </form>
+        </div>
+    </div>
+</div>

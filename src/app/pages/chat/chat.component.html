@@ -1,0 +1,40 @@
+  <div class="sidebar" [ngClass]="{ 'show': visible }">
+    <section class="chat-container">
+        <div class="card text-center contenedor-carta view-from-right" >
+      
+          <div class="card-body">
+            <div id="contenedor-mensajes" class="contenedor-mensajes">
+              <div >
+                <p
+                  *ngFor="let unMensaje of mensajesDeLaBd"
+                  class="p-2 mensajes"
+                  [ngClass]="
+                  navBar.userEmail == unMensaje.userEmail
+                      ? 'mensaje-enviado'
+                      : 'mensaje-recibido'
+                  "
+                >
+                  <span *ngIf="navBar.userEmail !== unMensaje.userEmail"        
+                    [ngClass]="navBar.userEmail == unMensaje.userEmail ? 'email-1' : 'email-2'"
+                    >{{ unMensaje.userName }}</span>
+                  <br/>
+                  {{ unMensaje.mensaje }} <br />
+                  <span class="fecha">{{ unMensaje.fecha }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+      
+          <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese su mensaje"
+              [(ngModel)]="mensajeQueSeEnviara"
+              [ngModelOptions]="{ standalone: true }"
+            />
+          </form>
+        </div>
+      </section>
+  </div>
+  

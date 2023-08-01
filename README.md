@@ -3,42 +3,42 @@
 https://saladejuegos-cisternas-celeste.netlify.app/
 
 # > INICIO
-![](fotos/homeSinLogin.png)
+![](fotos/homeSinLogin.PNG)
 
 # > REGISTRO
-![](fotos/registro.png)
+![](fotos/registro.PNG)
 
 # > INGRESAR
-![](fotos/login.png)
+![](fotos/login.PNG)
 
 # > CHAT
 ### Habilitado su uso en toda la página una vez que el usuario esta logueado
-![](fotos/chat.png)
+![](fotos/chat.PNG)
 
 # > JUEGOS
-![](fotos/juegos.png)
+![](fotos/juegos.PNG)
 ### Menú de juegos con una breve descripción de cada uno.
 ![](fotos/seleccion.png)
 
 ## Ahorcado:
-![](fotos/ahorcado.png)
+![](fotos/ahorcado.PNG)
 
 ## Mayor o Menor:
-![](fotos/mayormenor.png)
+![](fotos/mayormenor.PNG)
 
 ## Preguntados:
-![](fotos/preguntados.png)
+![](fotos/preguntados.PNG)
 
 ## Buscaminas:
-![](fotos/buscaminas.png)
+![](fotos/buscaminas.PNG)
 
 # > ESTADÍSTICAS
 ### Menú de estadÍsticas donde se puede elegir el usuario para ver los puntajes de cada juego.
-![](fotos/estadisticas.png)
+![](fotos/estadisticas.PNG)
 
 # > OPINIÓN
 ### Menú para dejar la opinion sobre el uso de la página.
-![](fotos/opinion.png)
+![](fotos/opinion.PNG)
 
 # > QUIÉN SOY
-![](fotos/quiensoy.png)
+![](fotos/quiensoy.PNG)
